@@ -173,19 +173,23 @@
                   </div>
                 </div>
                 <!--Selection: Type of pizza toppings-->
-                
-                <div class="col-12 my-2 text-center">
+
+                <div class="col-12 my-2 text-center" id="next-pizza-crust">
                   <button type="button" class="btn btn-warning" id="btn-pizza-size">Next >></button>
                 </div>
-                <div class="col-12 my-2 text-center">
+                <div class="col-12 my-2 text-center" id="next-pizza-toppings">
                   <button type="button" class="btn btn-warning" id="btn-pizza-crust">Next >></button>
                 </div>
-                <div class="col-12 my-2 text-center">
+                <div class="col-12 my-2 text-center" id="next-pizza-delivery">
                   <button type="button" class="btn btn-warning" id="btn-pizza-toppings">Next >></button>
                 </div>
-                <div class="col-12 my-2 d-flex justify-content-between">
-                  <button type="button" class="btn btn-warning" id="btn-order-add"><< Order another</button>
-                  <button type="submit" class="btn btn-warning" id="btn-submit">Checkout >></button>
+                <div class="d-flex flex-column flex-md-row my-2 justify-content-center align-items-center" id="final-stage">
+                    <div class="mx-md-3 my-3 my-md-0">
+                      <button type="button" class="btn btn-warning" id="btn-order-add"><< Order another</button>
+                    </div>
+                    <div>
+                      <button type="submit" class="btn btn-warning" id="btn-submit">Checkout >></button>
+                    </div>
                 </div>
               </div>
             </form>
