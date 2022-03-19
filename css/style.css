@@ -59,15 +59,21 @@ section#banner h2 {
 /**==============================
   SECTION: ORDER PLACEMENT
 =================================*/
-section#order-placement h3{
+section#order-placement h3 {
   font-size: 1.25rem;
   font-weight: 700;
 }
 
-section#order-placement div.card{
+section#order-placement div.card {
   border-radius: 4rem;
   box-shadow: 4rem 4rem rgba(255, 255, 255, 0.3);
   z-index: 2;
+}
+
+section#order-placement div#pizza-crust-selection img{
+  max-width: 6rem;
+  max-height: 6rem;
+  padding-bottom: 0.8rem;
 }
 
 /**==============================
