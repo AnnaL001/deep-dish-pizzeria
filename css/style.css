@@ -76,7 +76,11 @@ section#order-placement div.card {
 }
 
 section#order-placement div#pizza-crust-selection,
-section#order-placement div#pizza-topping-selection{
+section#order-placement div#pizza-topping-selection,
+section#order-placement div#next-pizza-toppings,
+section#order-placement div#next-pizza-delivery,
+section#order-placement button#btn-order-add,
+section#order-placement button#btn-submit {
   display: none;
 }
 
