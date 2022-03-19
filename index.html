@@ -55,11 +55,12 @@
             <form action="" id="order-placement-form">
               <h3 class="card-title text-center my-2 text-color-change">What would you like to have today? </h3>
               <div class="container">
-                <div class="row my-4 my-md-5">
+                <!--Selection: Size of pizza-->
+                <div class="row my-4 my-md-5" id="pizza-size-selection">
                   <div class="col-12 col-md-4 my-3 my-md-0 text-center">
                     <img src="./images/small-pizza.png" alt="Small sized pizza" class="img-fluid">
                     <div class="form-check w-50 mx-auto">
-                      <input class="form-check-input" type="radio" name="size" id="small-pizza" value="small">
+                      <input class="form-check-input" type="radio" name="size" id="small-pizza" value="Small">
                       <label class="form-check-label text-color-change" for="small-pizza">
                         Small
                       </label>
@@ -68,7 +69,7 @@
                   <div class="col-12 col-md-4 my-3 my-md-0 text-center">
                     <img src="./images/medium-pizza.png" alt="Medium sized pizza" class="img-fluid">
                     <div class="form-check w-50 mx-auto">
-                      <input class="form-check-input" type="radio" name="size" id="medium-pizza" value="medium">
+                      <input class="form-check-input" type="radio" name="size" id="medium-pizza" value="Medium">
                       <label class="form-check-label text-color-change" for="medium-pizza">
                         Medium
                       </label>
@@ -77,15 +78,45 @@
                   <div class="col-12 col-md-4 my-3 my-md-0 text-center">
                     <img src="./images/large-pizza.png" alt="Large sized pizza" class="img-fluid">
                     <div class="form-check w-50 mx-auto">
-                      <input class="form-check-input" type="radio" name="size" id="large-pizza" value="large">
+                      <input class="form-check-input" type="radio" name="size" id="large-pizza" value="Large">
                       <label class="form-check-label text-color-change" for="large-pizza">
                         Large
                       </label>
                     </div>
                   </div>
                 </div>
+                <!--Selection: Type of pizza crust-->
+                <div class="row my-4 my-md-5" id="pizza-crust-selection">
+                  <div class="col-12 col-md-4 my-3 my-md-0 text-center">
+                    <img src="./images/crispy-crust.png" alt="Crispy crust pizza" class="img-fluid">
+                    <div class="form-check w-50 mx-auto">
+                      <input class="form-check-input" type="radio" name="crust" id="crispy-crust" value="Crispy">
+                      <label class="form-check-label text-color-change" for="crispy-crust">
+                        Crispy
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-4 my-3 my-md-0 text-center">
+                    <img src="./images/stuffed-crust.png" alt="Stuffed crust pizza" class="img-fluid">
+                    <div class="form-check w-50 mx-auto">
+                      <input class="form-check-input" type="radio" name="crust" id="stuffed-crust" value="Stuffed">
+                      <label class="form-check-label text-color-change" for="stuffed-crust">
+                        Stuffed
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-4 my-3 my-md-0 text-center">
+                    <img src="./images/glutten-free-crust.png" alt="Glutten-free crust pizza" class="img-fluid">
+                    <div class="form-check w-50 mx-auto">
+                      <input class="form-check-input" type="radio" name="crust" id="glutten-free-crust" value="Glutten-free">
+                      <label class="form-check-label text-color-change" for="glutten-free-crust">
+                        Glutten-free
+                      </label>
+                    </div>
+                  </div>
+                </div>
                 <div class="col-12 my-2 text-center">
-                  <button type="button" class="btn btn-warning" id="btn-pizza-size">Next >></button>
+                  <button type="button" class="btn btn-warning" id="btn-pizza-crust">Next >></button>
                 </div>
               </div>
             </form>
