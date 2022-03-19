@@ -78,6 +78,7 @@ section#order-placement div.card {
 section#order-placement div#pizza-crust-selection,
 section#order-placement div#pizza-topping-selection,
 section#order-placement div#pizza-delivery,
+section#order-placement div#pizza-delivery-location,
 section#order-placement div#next-pizza-toppings,
 section#order-placement div#next-pizza-delivery,
 section#order-placement div#next-pizza-delivery-location,
@@ -96,6 +97,15 @@ section#order-placement div#pizza-size-selection img {
 section#order-placement div#pizza-crust-selection img,
 section#order-placement div#pizza-topping-selection img {
   padding-bottom: 0.8rem;
+}
+
+section#order-placement input.form-control {
+  border-radius: 6rem;
+}
+
+section#order-placement input.form-control:focus {
+  border-color: rgba(255, 193, 5, 0.7);
+  box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.2);
 }
 
 /**==============================
