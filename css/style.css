@@ -12,6 +12,11 @@ button.btn {
   font-size: 1.2rem;
 }
 
+input.form-check-input:checked{
+  background-color: rgb(255, 193, 7);
+  border-color: rgb(255, 193, 7);
+}
+
 /**==============================
   SECTION: NAVBAR
 =================================*/
@@ -34,7 +39,7 @@ nav li.nav-item {
 }
 
 nav li.nav-item a:hover {
-  color: #ffc107 !important;
+  color: rgb(255, 193, 7) !important;
 }
 
 /**==============================
@@ -47,7 +52,7 @@ section#banner h1 {
 
 section#banner h2 {
   font-family: 'Lobster', cursive;
-  color: #ffc107;
+  color: rgb(255, 193, 7);
   font-size: 1.5rem;
 }
 
@@ -63,4 +68,13 @@ section#order-placement div.card{
   border-radius: 4rem;
   box-shadow: 4rem 4rem rgba(255, 255, 255, 0.3);
   z-index: 2;
+}
+
+/**==============================
+  SECTION: MEDIA QUERIES
+=================================*/
+@media screen and (max-width: 576px) {
+  nav i {
+    margin-left: 1rem;
+  }
 }
