@@ -75,6 +75,11 @@ section#order-placement div.card {
   z-index: 2;
 }
 
+section#order-placement div#pizza-crust-selection,
+section#order-placement div#pizza-topping-selection{
+  display: none;
+}
+
 section#order-placement div#pizza-crust-selection img,
 section#order-placement div#pizza-topping-selection img,
 section#order-placement div#pizza-size-selection img {
