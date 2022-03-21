@@ -26,6 +26,8 @@ $("input[name='delivery']").on("change", function(event){
     }
     
     generateOrderSummaryAndAlert(order);
+    redirectToHome();
+    event2.target.reset();
   });
 });
 
@@ -77,13 +79,26 @@ function createText(message){
   divElement.appendChild(textElement);
 }
 
+function redirectToHome(){
+  // Display back button
+  $("div#redirect-to-home").show();
+
+  $("button#btn-back").on("click", function(){
+    $("div#order-summary").hide();
+    $("div#pizza-topping-selection, div#pizza-crust-selection, div#pizza-topping-selection, div#pizza-delivery, button#btn-submit, div#number-of-pizzas").show();
+    // Hide back button
+    $("button#btn-back").hide();
+  });
+  
+}
+
 function generateOrderSummaryAndAlert(order){
   let orderSummary = order.getSummary();
   let no = 1;
   // Hide other divs
   hideElements([$("div#pizza-size-selection"), $("div#pizza-crust-selection"), 
   $("div#pizza-topping-selection"), $("div#pizza-delivery"), $("div#pizza-delivery-location"),
-  $("button#btn-submit"), $("div#number-of-pizzas")]);
+  $("div#checkout"), $("div#number-of-pizzas")]);
   // Show div for order summary
   $("div#order-summary").show();
   // Alerts
