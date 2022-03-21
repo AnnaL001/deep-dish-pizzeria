@@ -68,8 +68,9 @@ section#banner h2 {
 /**==============================
   SECTION: ORDER PLACEMENT
 =================================*/
-section#order-placement h3,  
-footer h3{
+section#order-placement h3, 
+section#order-summary h3, 
+footer h3 {
   font-size: 1.25rem;
   font-weight: 700;
 }
@@ -82,7 +83,7 @@ section#order-placement div.card{
 }
 
 section#order-placement div#pizza-delivery-location,
-section#order-placement div#order-summary {
+section#order-placement div#order-summary{
   display: none;
 }
 
@@ -125,7 +126,7 @@ footer i{
   section#order-placement div.card{
     width: 100%;
   }
-  
+
   footer {
     text-align: center;
   }
