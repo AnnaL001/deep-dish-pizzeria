@@ -1,4 +1,4 @@
-import{Pizza} from './pizza.js';
+import{prices, Pizza} from './pizza.js';
 import{Order} from './order.js';
 
 // Fetch input
@@ -17,19 +17,22 @@ $("input[name='delivery']").on("change", function(event){
     let pizzaToppings = $.map($("input[name='toppings']:checked"), (topping) => $(topping).val());
     let pizzaDelivery = Boolean($("input[name='delivery']:checked").val());
     let pizzaDeliveryLocation = $("input[name='location']").val();
+    let numberOfPizzas=$("input[name='number']").val();
     console.log(pizzaDeliveryLocation);
-    let pizza = new Pizza(pizzaSize, pizzaCrust, pizzaToppings);
     let order = new Order(pizzaDelivery, pizzaDeliveryLocation);
-    order.add(pizza);
-    console.log(pizza.getPizzaDetails());
+    for(let i=1; i<=numberOfPizzas; i++){
+      let pizza = new Pizza(pizzaSize, pizzaCrust, pizzaToppings);
+      order.add(pizza);
+      console.log(pizza.getPizzaDetails());
+    }
     console.log(order.getSummary());
     generateOrderSummaryAndAlert(order);
   });
 });
 
-function hideDivs(divArray){
-  divArray.forEach(function(divElement){
-    $(divElement).hide();
+function hideElements(elements){
+  elements.forEach(function(element){
+    $(element).hide();
   });
 }
 
@@ -66,11 +69,22 @@ function createRowData(tableRow){
   return tableData;
 }
 
+function createText(message){
+  let textElement = document.createElement('h3');
+  textElement.classList.add('text-center');
+  textElement.textContent = message;
+
+  let divElement = document.getElementById('order-summary');
+  divElement.appendChild(textElement);
+}
+
 function generateOrderSummaryAndAlert(order){
   let orderSummary = order.getSummary();
   let no = 1;
   // Hide other divs
-  hideDivs([$("div#pizza-size-selection"), $("div#pizza-crust-selection"), $("div#pizza-topping-selection"), $("div#pizza-delivery"), $("div#pizza-delivery-location")]);
+  hideElements([$("div#pizza-size-selection"), $("div#pizza-crust-selection"), 
+  $("div#pizza-topping-selection"), $("div#pizza-delivery"), $("div#pizza-delivery-location"),
+  $("button#btn-submit"), $("input#number")]);
   // Show div for order summary
   $("div#order-summary").show();
   // Alerts
@@ -88,6 +102,12 @@ function generateOrderSummaryAndAlert(order){
     createRowData(row).textContent = `${pizza.toppings.map((topping) => capitalize(topping)).join(",")} - ${pizza.price.toppings}`;
     createRowData(row).textContent = `${pizza.price.total}`;
   });
+
+  if(orderSummary.isDelivery){
+    createText(`Delivery fees: ${prices.delivery}`);
+  }
+  createText(`Total: ${orderSummary.totalPrice}`);
+
 }
 
 const capitalize = (word) => {
