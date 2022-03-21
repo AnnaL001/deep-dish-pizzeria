@@ -3,7 +3,7 @@
 #### By **[Lynn Nyangon](https://github.com/AnnaL001)**
 ![An image of the web application](./images/webapp.png)
 ## Description
-A web application of a fictional pizzeria(Deep Dish Pizzeria) that allows users to place orders of pizzas and based on the size,type of crust and toppings, the price of the pizza is comuputed. In addition to that, if a user would like for the pizza to be delivered, an additional cost is added to the total price of pizzas ordered to generate the overall cost of the order. Besides this, their location information is also recorded and form inputs validated.
+A web application of a fictional pizzeria(Deep Dish Pizzeria) that allows users to place orders of pizzas and based on the size,type of crust and toppings, the price of the pizza is comuputed. In addition to that, if a user would like for the pizza to be delivered, an additional cost is added to the total price of pizzas ordered to generate the overall cost of the order. Besides this, their location information is also recorded and form inputs validated.Finally, a user can switch between dark theme and light theme depending on their preference.
 ## Setup/Installation Requirements
 * Using a mobile device/laptop ensure you have access to stable internet connection
 * To access the web application's code from your GitHub repository, you can fork the repository main's branch via the 'Fork' button.
