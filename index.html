@@ -48,6 +48,12 @@
   <main>
     <section id="order-placement" class="py-1">
       <div id="alerts" class="col-8 col-md-6 mx-auto text-center"></div>
+      <div class="container">
+        <div class="form-floating w-25 mx-auto my-4">
+          <input type="number" class="form-control" id="number" name="number" placeholder="Number of pizzas" aria-label="Number of pizzas">
+          <label for="number">Number of pizzas</label>
+        </div>
+      </div>
       <form id="order-placement-form">
         <div class="container">
           <!--Selection: Size of pizza-->
@@ -246,8 +252,8 @@
             </div>
           </div>
 
-          <div class="col-12 my-4 text-center" id="next-pizza-crust">
-            <button type="submit" class="btn btn-warning" id="btn-submit">Submit >></button>
+          <div class="col-12 my-4 text-center" id="checkout">
+            <button type="submit" class="btn btn-warning" id="btn-submit">Checkout >></button>
           </div>
         </div>
       </form>
