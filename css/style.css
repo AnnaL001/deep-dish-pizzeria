@@ -90,8 +90,8 @@ section#order-placement div#order-summary{
 section#order-placement div#pizza-crust-selection img,
 section#order-placement div#pizza-topping-selection img,
 section#order-placement div#pizza-size-selection img {
-  max-width: 6rem;
-  max-height: 6rem;
+  max-width: 5.5rem;
+  max-height: 5.5rem;
 }
 
 section#order-placement div#pizza-crust-selection img,
