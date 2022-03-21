@@ -18,14 +18,13 @@ $("input[name='delivery']").on("change", function(event){
     let pizzaDelivery = Boolean($("input[name='delivery']:checked").val());
     let pizzaDeliveryLocation = $("input[name='location']").val();
     let numberOfPizzas=$("input[name='number']").val();
-    console.log(pizzaDeliveryLocation);
+    
     let order = new Order(pizzaDelivery, pizzaDeliveryLocation);
     for(let i=1; i<=numberOfPizzas; i++){
       let pizza = new Pizza(pizzaSize, pizzaCrust, pizzaToppings);
       order.add(pizza);
-      console.log(pizza.getPizzaDetails());
     }
-    console.log(order.getSummary());
+    
     generateOrderSummaryAndAlert(order);
   });
 });
@@ -84,7 +83,7 @@ function generateOrderSummaryAndAlert(order){
   // Hide other divs
   hideElements([$("div#pizza-size-selection"), $("div#pizza-crust-selection"), 
   $("div#pizza-topping-selection"), $("div#pizza-delivery"), $("div#pizza-delivery-location"),
-  $("button#btn-submit"), $("input#number")]);
+  $("button#btn-submit"), $("div#number-of-pizzas")]);
   // Show div for order summary
   $("div#order-summary").show();
   // Alerts
@@ -94,6 +93,7 @@ function generateOrderSummaryAndAlert(order){
     createSuccessAlert(`Thank you for choosing us`);
   }
 
+  // Table containing order summary info
   orderSummary.pizzas.forEach(function(pizza){
     let row = createTableRow();
     createRowData(row).textContent = no++;
@@ -103,9 +103,13 @@ function generateOrderSummaryAndAlert(order){
     createRowData(row).textContent = `${pizza.price.total}`;
   });
 
+  let pizzaPrice = orderSummary.pizzas.map((pizza) => pizza.price.total).reduce((previous, current) => previous + current, 0);
+  
   if(orderSummary.isDelivery){
+    createText(`Pizza(s) price: ${pizzaPrice}`);
     createText(`Delivery fees: ${prices.delivery}`);
   }
+
   createText(`Total: ${orderSummary.totalPrice}`);
 
 }
