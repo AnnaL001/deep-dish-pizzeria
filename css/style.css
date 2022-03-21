@@ -108,6 +108,10 @@ section#order-placement input.form-control:focus {
   box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.2);
 }
 
+section#order-placement div#number-of-pizzas{
+  width: 25%;
+}
+
 /**==============================
   SECTION: FOOTER
 =================================*/
@@ -124,6 +128,10 @@ footer i{
     margin-left: 1rem;
   }
   section#order-placement div.card{
+    width: 100%;
+  }
+
+  section#order-placement div#number-of-pizzas {
     width: 100%;
   }
 
