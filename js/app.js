@@ -11,6 +11,7 @@ $("input[name='delivery']").on("change", function(event){
 
   $("form#order-placement-form").on("submit", function(event2){
     event2.preventDefault();
+
     //Capture input
     let pizzaSize = $("input[name='size']:checked").val();
     let pizzaCrust = $("input[name='crust']:checked").val();
@@ -19,24 +20,27 @@ $("input[name='delivery']").on("change", function(event){
     let pizzaDeliveryLocation = $("input[name='location']").val();
     let numberOfPizzas=$("input[name='number']").val();
     
-    let order = new Order(pizzaDelivery, pizzaDeliveryLocation);
-    for(let i=1; i<=numberOfPizzas; i++){
-      let pizza = new Pizza(pizzaSize, pizzaCrust, pizzaToppings);
-      order.add(pizza);
-    }
-    
+    let order = generateOrder(pizzaSize, pizzaCrust, pizzaToppings, pizzaDelivery, pizzaDeliveryLocation, numberOfPizzas);
     generateOrderSummaryAndAlert(order);
-    redirectToHome();
-    event2.target.reset();
+    redirectToForm();
   });
 });
 
-function hideElements(elements){
-  elements.forEach(function(element){
-    $(element).hide();
-  });
+
+
+// Generate order information
+function generateOrder(pizzaSize, pizzaCrust, pizzaToppings, pizzaDelivery, pizzaDeliveryLocation, numberOfPizzas){
+  let order = new Order(pizzaDelivery, pizzaDeliveryLocation);
+
+  for(let i=1; i<=numberOfPizzas; i++){
+    let pizza = new Pizza(pizzaSize, pizzaCrust, pizzaToppings);
+    order.add(pizza);
+  }
+
+  return order;
 }
 
+// Create alert for successful event
 function createSuccessAlert(message){
   let alert = document.createElement('div');
   alert.classList.add('alert', 'alert-warning', 'alert-dismissible', 'fade', 'show');
@@ -48,6 +52,7 @@ function createSuccessAlert(message){
   alertSection.appendChild(alert);
 }
 
+// Create button to dismiss alert
 function createDismissButton(divElement){
   let button = document.createElement('button');
   button.classList.add('btn-close');
@@ -57,6 +62,7 @@ function createDismissButton(divElement){
   divElement.appendChild(button);
 }
 
+// Create table row
 function createTableRow(){
   let tableBody = document.getElementById('table-data');
   let row = document.createElement('tr');
@@ -64,12 +70,14 @@ function createTableRow(){
   return row;
 }
 
+// Create table data
 function createRowData(tableRow){
   let tableData = document.createElement('td');
   tableRow.appendChild(tableData);
   return tableData;
 }
 
+// Create text information
 function createText(message){
   let textElement = document.createElement('h3');
   textElement.classList.add('text-center');
@@ -79,26 +87,29 @@ function createText(message){
   divElement.appendChild(textElement);
 }
 
-function redirectToHome(){
+// Redirect to form
+function redirectToForm(){
   // Display back button
-  $("div#redirect-to-home").show();
+  $("div#redirect-to-form").show();
 
   $("button#btn-back").on("click", function(){
     $("div#order-summary").hide();
     $("div#pizza-size-selection, div#pizza-crust-selection, div#pizza-topping-selection, div#pizza-delivery, div#checkout, div#number-of-pizzas").show();
     // Hide back button
     $("button#btn-back").hide();
+    location.reload();
   });
   
 }
 
+// Generate order summary and alert
 function generateOrderSummaryAndAlert(order){
   let orderSummary = order.getSummary();
   let no = 1;
+
   // Hide other divs
-  hideElements([$("div#pizza-size-selection"), $("div#pizza-crust-selection"), 
-  $("div#pizza-topping-selection"), $("div#pizza-delivery"), $("div#pizza-delivery-location"),
-  $("div#checkout"), $("div#number-of-pizzas")]);
+  $("div#pizza-size-selection, div#pizza-crust-selection, div#pizza-topping-selection, div#pizza-delivery, div#pizza-delivery-location, div#checkout, div#number-of-pizzas").hide();
+
   // Show div for order summary
   $("div#order-summary").show();
   // Alerts
@@ -126,7 +137,6 @@ function generateOrderSummaryAndAlert(order){
   }
 
   createText(`Total: ${orderSummary.totalPrice}`);
-
 }
 
 const capitalize = (word) => {
