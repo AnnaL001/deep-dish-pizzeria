@@ -55,6 +55,10 @@ nav li.nav-item a:hover {
   color: rgb(255, 193, 7) !important;
 }
 
+nav i{
+  cursor: pointer;
+}
+
 /**==============================
   SECTION: BANNER
 =================================*/
