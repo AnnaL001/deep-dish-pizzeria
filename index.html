@@ -30,9 +30,6 @@
             <li class="nav-item">
               <a class="nav-link active text-warning" aria-current="page" href="#">Home</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link text-color-change" href="#">Contact us</a>
-            </li>
           </ul>
           <div class="d-flex">
             <i class="fa-solid fa-circle-half-stroke text-color-change"></i>
@@ -50,210 +47,246 @@
   </header>
   <main>
     <section id="order-placement" class="py-1">
-      <div id="alerts" class="col-12 col-md-8 mx-auto text-center"></div>
+      <div id="alerts" class="col-8 col-md-6 mx-auto text-center"></div>
       <form id="order-placement-form">
-        <!--Selection: Size of pizza-->
-        <div class="card w-75 mx-auto py-3 bg-light my-4" id="pizza-size-selection">
-          <div class="card-body">
-            <h3 class="card-title text-center my-2 text-color-change">What would you like to have today? </h3>
-            <div class="container">
-              <div class="row my-4 my-md-5">
-                <div class="col-12 col-md-4 my-3 my-md-0 text-center">
-                  <img src="./images/small-pizza.png" alt="Small sized pizza" class="img-fluid">
-                  <div class="form-check w-50 mx-auto">
-                    <input class="form-check-input" type="radio" name="size" id="small-pizza" value="small" required>
-                    <label class="form-check-label text-color-change" for="small-pizza">
-                      Small
-                    </label>
+        <div class="container">
+          <!--Selection: Size of pizza-->
+          <div class="card mx-auto py-3 bg-light my-4" id="pizza-size-selection">
+            <div class="card-body">
+              <h3 class="card-title text-center my-2 text-color-change">What would you like to have today? </h3>
+              <div class="container">
+                <div class="row my-4 my-md-5">
+                  <div class="col-12 col-md-4 my-3 my-md-0 text-center">
+                    <img src="./images/small-pizza.png" alt="Small sized pizza" class="img-fluid">
+                    <div class="form-check w-50 mx-auto">
+                      <input class="form-check-input" type="radio" name="size" id="small-pizza" value="small" required>
+                      <label class="form-check-label text-color-change" for="small-pizza">
+                        Small
+                      </label>
+                    </div>
                   </div>
-                </div>
-                <div class="col-12 col-md-4 my-3 my-md-0 text-center">
-                  <img src="./images/medium-pizza.png" alt="Medium sized pizza" class="img-fluid">
-                  <div class="form-check w-50 mx-auto">
-                    <input class="form-check-input" type="radio" name="size" id="medium-pizza" value="medium">
-                    <label class="form-check-label text-color-change" for="medium-pizza">
-                      Medium
-                    </label>
+                  <div class="col-12 col-md-4 my-3 my-md-0 text-center">
+                    <img src="./images/medium-pizza.png" alt="Medium sized pizza" class="img-fluid">
+                    <div class="form-check w-50 mx-auto">
+                      <input class="form-check-input" type="radio" name="size" id="medium-pizza" value="medium">
+                      <label class="form-check-label text-color-change" for="medium-pizza">
+                        Medium
+                      </label>
+                    </div>
                   </div>
-                </div>
-                <div class="col-12 col-md-4 my-3 my-md-0 text-center">
-                  <img src="./images/large-pizza.png" alt="Large sized pizza" class="img-fluid">
-                  <div class="form-check w-50 mx-auto">
-                    <input class="form-check-input" type="radio" name="size" id="large-pizza" value="large">
-                    <label class="form-check-label text-color-change" for="large-pizza">
-                      Large
-                    </label>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-          <!--Selection: Type of pizza crust-->
-        <div class="card w-75 mx-auto py-3 bg-light my-4" id="pizza-crust-selection">
-          <div class="card-body">
-            <h3 class="card-title text-center my-2 text-color-change">What is your preferred choice of crust? </h3>
-            <div class="container">
-              <div class="row my-4 my-md-5">
-                <div class="col-12 col-md-4 my-3 my-md-0 text-center">
-                  <img src="./images/crispy-crust.png" alt="Crispy crust pizza" class="img-fluid">
-                  <div class="form-check w-50 mx-auto">
-                    <input class="form-check-input" type="radio" name="crust" id="crispy-crust" value="crispy" required>
-                    <label class="form-check-label text-color-change" for="crispy-crust">
-                      Crispy
-                    </label>
-                  </div>
-                </div>
-                <div class="col-12 col-md-4 my-3 my-md-0 text-center">
-                  <img src="./images/stuffed-crust.png" alt="Stuffed crust pizza" class="img-fluid">
-                  <div class="form-check w-50 mx-auto">
-                    <input class="form-check-input" type="radio" name="crust" id="stuffed-crust" value="stuffed">
-                    <label class="form-check-label text-color-change" for="stuffed-crust">
-                      Stuffed
-                    </label>
-                  </div>
-                </div>
-                <div class="col-12 col-md-4 my-3 my-md-0 text-center">
-                  <img src="./images/glutten-free-crust.png" alt="Glutten-free crust pizza" class="img-fluid">
-                  <div class="form-check w-50 mx-auto">
-                    <input class="form-check-input" type="radio" name="crust" id="glutten-free-crust" value="gluttenFree">
-                    <label class="form-check-label text-color-change" for="glutten-free-crust">
-                      Glutten-free
-                    </label>
+                  <div class="col-12 col-md-4 my-3 my-md-0 text-center">
+                    <img src="./images/large-pizza.png" alt="Large sized pizza" class="img-fluid">
+                    <div class="form-check w-50 mx-auto">
+                      <input class="form-check-input" type="radio" name="size" id="large-pizza" value="large">
+                      <label class="form-check-label text-color-change" for="large-pizza">
+                        Large
+                      </label>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <!--Selection: Type of pizza toppings-->
-        <div class="card w-75 mx-auto py-3 bg-light my-4" id="pizza-topping-selection">
-          <div class="card-body">
-            <h3 class="card-title text-center my-2 text-color-change">What toppings would you like? </h3>
-            <div class="container">
-              <div class="row my-4 my-md-5">
-                <div class="col-12 col-md-2 my-3 my-md-0 text-center">
-                  <img src="./images/mozarella.png" alt="Pizza with mozarella topping" class="img-fluid">
-                  <div class="form-check w-50 mx-auto">
-                    <input class="form-check-input" type="checkbox" name="toppings" id="mozarella" value="mozarella">
-                    <label class="form-check-label text-color-change" for="mozarella">
-                      Mozarella
-                    </label>
+            <!--Selection: Type of pizza crust-->
+          <div class="card mx-auto py-3 bg-light my-4" id="pizza-crust-selection">
+            <div class="card-body">
+              <h3 class="card-title text-center my-2 text-color-change">What is your preferred choice of crust? </h3>
+              <div class="container">
+                <div class="row my-4 my-md-5">
+                  <div class="col-12 col-md-4 my-3 my-md-0 text-center">
+                    <img src="./images/crispy-crust.png" alt="Crispy crust pizza" class="img-fluid">
+                    <div class="form-check w-50 mx-auto">
+                      <input class="form-check-input" type="radio" name="crust" id="crispy-crust" value="crispy" required>
+                      <label class="form-check-label text-color-change" for="crispy-crust">
+                        Crispy
+                      </label>
+                    </div>
                   </div>
-                </div>
-                <div class="col-12 col-md-2 my-3 my-md-0 text-center">
-                  <img src="./images/pepperoni.png" alt="Pizza with pepperoni topping" class="img-fluid">
-                  <div class="form-check w-50 mx-auto">
-                    <input class="form-check-input" type="checkbox" name="toppings" id="pepperoni" value="pepperoni">
-                    <label class="form-check-label text-color-change" for="pepperoni">
-                      Pepperoni
-                    </label>
+                  <div class="col-12 col-md-4 my-3 my-md-0 text-center">
+                    <img src="./images/stuffed-crust.png" alt="Stuffed crust pizza" class="img-fluid">
+                    <div class="form-check w-50 mx-auto">
+                      <input class="form-check-input" type="radio" name="crust" id="stuffed-crust" value="stuffed">
+                      <label class="form-check-label text-color-change" for="stuffed-crust">
+                        Stuffed
+                      </label>
+                    </div>
                   </div>
-                </div>
-                <div class="col-12 col-md-2 my-3 my-md-0 text-center">
-                  <img src="./images/bacon.png" alt="Pizza with bacon topping" class="img-fluid">
-                  <div class="form-check w-50 mx-auto">
-                    <input class="form-check-input" type="checkbox" name="toppings" id="bacon" value="bacon">
-                    <label class="form-check-label text-color-change" for="bacon">
-                      Bacon
-                    </label>
-                  </div>
-                </div>
-                <div class="col-12 col-md-2 my-3 my-md-0 text-center">
-                  <img src="./images/barbecue.png" alt="Pizza with barbecue topping" class="img-fluid">
-                  <div class="form-check w-50 mx-auto">
-                    <input class="form-check-input" type="checkbox" name="toppings" id="barbecue" value="barbecue">
-                    <label class="form-check-label text-color-change" for="barbecue">
-                      Barbecue
-                    </label>
-                  </div>
-                </div>
-                <div class="col-12 col-md-2 my-3 my-md-0 text-center">
-                  <img src="./images/pineapple.png" alt="Pizza with pineapple topping" class="img-fluid">
-                  <div class="form-check w-50 mx-auto">
-                    <input class="form-check-input" type="checkbox" name="toppings" id="pineapple" value="pineapple">
-                    <label class="form-check-label text-color-change" for="pineapple">
-                      Pineapple
-                    </label>
-                  </div>
-                </div>
-                <div class="col-12 col-md-2 my-3 my-md-0 text-center">
-                  <img src="./images/black-olives.png" alt="Pizza with black olives topping" class="img-fluid">
-                  <div class="form-check w-50 mx-auto">
-                    <input class="form-check-input" type="checkbox" name="toppings" id="black-olives" value="blackOlives">
-                    <label class="form-check-label text-color-change" for="black-olives">
-                      Black olives
-                    </label>
+                  <div class="col-12 col-md-4 my-3 my-md-0 text-center">
+                    <img src="./images/glutten-free-crust.png" alt="Glutten-free crust pizza" class="img-fluid">
+                    <div class="form-check w-50 mx-auto">
+                      <input class="form-check-input" type="radio" name="crust" id="glutten-free-crust" value="gluttenFree">
+                      <label class="form-check-label text-color-change" for="glutten-free-crust">
+                        Glutten-free
+                      </label>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <!--Selection: Pizza delivery -->
-        <div class="card w-75 mx-auto py-3 bg-light my-4" id="pizza-delivery">
-          <div class="card-body">
-            <h3 class="card-title text-center my-2 text-color-change">Would you like your pizza delivered for an additional 200Ksh? </h3>
-            <div class="container">
-              <div class="row my-3 my-md-4">
-                <div class="col-6 mx-auto">
-                  <div class="form-check w-50 my-3 mx-auto">
-                    <input class="form-check-input" type="radio" name="delivery" id="delivery-yes" value="yes" required>
-                    <label class="form-check-label text-color-change" for="delivery-yes">
-                      Yes
-                    </label>
+          <!--Selection: Type of pizza toppings-->
+          <div class="card mx-auto py-3 bg-light my-4" id="pizza-topping-selection">
+            <div class="card-body">
+              <h3 class="card-title text-center my-2 text-color-change">What toppings would you like? </h3>
+              <div class="container">
+                <div class="row my-4 my-md-5">
+                  <div class="col-12 col-md-2 my-3 my-md-0 text-center">
+                    <img src="./images/mozarella.png" alt="Pizza with mozarella topping" class="img-fluid">
+                    <div class="form-check w-50 mx-auto">
+                      <input class="form-check-input" type="checkbox" name="toppings" id="mozarella" value="mozarella">
+                      <label class="form-check-label text-color-change" for="mozarella">
+                        Mozarella
+                      </label>
+                    </div>
                   </div>
-                  <div class="form-check w-50 mx-auto">
-                    <input class="form-check-input" type="radio" name="delivery" id="delivery-no" value="">
-                    <label class="form-check-label text-color-change" for="delivery-no">
-                      No
-                    </label>
+                  <div class="col-12 col-md-2 my-3 my-md-0 text-center">
+                    <img src="./images/pepperoni.png" alt="Pizza with pepperoni topping" class="img-fluid">
+                    <div class="form-check w-50 mx-auto">
+                      <input class="form-check-input" type="checkbox" name="toppings" id="pepperoni" value="pepperoni">
+                      <label class="form-check-label text-color-change" for="pepperoni">
+                        Pepperoni
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-2 my-3 my-md-0 text-center">
+                    <img src="./images/bacon.png" alt="Pizza with bacon topping" class="img-fluid">
+                    <div class="form-check w-50 mx-auto">
+                      <input class="form-check-input" type="checkbox" name="toppings" id="bacon" value="bacon">
+                      <label class="form-check-label text-color-change" for="bacon">
+                        Bacon
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-2 my-3 my-md-0 text-center">
+                    <img src="./images/barbecue.png" alt="Pizza with barbecue topping" class="img-fluid">
+                    <div class="form-check w-50 mx-auto">
+                      <input class="form-check-input" type="checkbox" name="toppings" id="barbecue" value="barbecue">
+                      <label class="form-check-label text-color-change" for="barbecue">
+                        Barbecue
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-2 my-3 my-md-0 text-center">
+                    <img src="./images/pineapple.png" alt="Pizza with pineapple topping" class="img-fluid">
+                    <div class="form-check w-50 mx-auto">
+                      <input class="form-check-input" type="checkbox" name="toppings" id="pineapple" value="pineapple">
+                      <label class="form-check-label text-color-change" for="pineapple">
+                        Pineapple
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-2 my-3 my-md-0 text-center">
+                    <img src="./images/black-olives.png" alt="Pizza with black olives topping" class="img-fluid">
+                    <div class="form-check w-50 mx-auto">
+                      <input class="form-check-input" type="checkbox" name="toppings" id="black-olives" value="blackOlives">
+                      <label class="form-check-label text-color-change" for="black-olives">
+                        Black olives
+                      </label>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <!--Selection: Pizza delivery location -->
-        <div class="card w-75 mx-auto py-3 bg-light my-4" id="pizza-delivery-location">
-          <div class="card-body">
-            <h3 class="card-title text-center my-2 text-color-change">Please enter your delivery location</h3>
-            <div class="form-floating w-50 mx-auto my-4">
-              <input type="text" class="form-control" id="location" name="location" placeholder="Delivery location" aria-label="Delivery location">
-              <label for="delivery-location">Delivery location</label>
+          <!--Selection: Pizza delivery -->
+          <div class="card mx-auto py-3 bg-light my-4" id="pizza-delivery">
+            <div class="card-body">
+              <h3 class="card-title text-center my-2 text-color-change">Would you like your pizza delivered for an additional 200Ksh? </h3>
+              <div class="container">
+                <div class="row my-3 my-md-4">
+                  <div class="col-6 mx-auto">
+                    <div class="form-check w-50 my-3 mx-auto">
+                      <input class="form-check-input" type="radio" name="delivery" id="delivery-yes" value="yes" required>
+                      <label class="form-check-label text-color-change" for="delivery-yes">
+                        Yes
+                      </label>
+                    </div>
+                    <div class="form-check w-50 mx-auto">
+                      <input class="form-check-input" type="radio" name="delivery" id="delivery-no" value="">
+                      <label class="form-check-label text-color-change" for="delivery-no">
+                        No
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </div>  
 
-        <!--Display summary of orders -->
-        <div class="card w-75 mx-auto py-3 bg-light my-4" id="order-summary">
-          <div class="card-body">
-            <h3 class="card-title text-center my-2 text-color-change">Your order summary:</h3>
-            <table class="table table-sm my-3">
-              <thead>
-                <tr>
-                  <th scope="col">#</th>
-                  <th scope="col">Size</th>
-                  <th scope="col">Crust</th>
-                  <th scope="col">Toppings</th>
-                  <th scope="col">Total</th>
-                </tr>
-              </thead>
-              <tbody id="table-data"></tbody>
-            </table>
+          <!--Selection: Pizza delivery location -->
+          <div class="card mx-auto py-3 bg-light my-4" id="pizza-delivery-location">
+            <div class="card-body">
+              <h3 class="card-title text-center my-2 text-color-change">Please enter your delivery location</h3>
+              <div class="form-floating w-50 mx-auto my-4">
+                <input type="text" class="form-control" id="location" name="location" placeholder="Delivery location" aria-label="Delivery location">
+                <label for="delivery-location">Delivery location</label>
+              </div>
+            </div>
+          </div>  
+
+          <!--Display summary of orders -->
+          <div class="card mx-auto py-3 bg-light my-4" id="order-summary">
+            <div class="card-body">
+              <h3 class="card-title text-center my-2 text-color-change">Your order summary:</h3>
+              <table class="table table-sm my-3">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Size</th>
+                    <th scope="col">Crust</th>
+                    <th scope="col">Toppings</th>
+                    <th scope="col">Total</th>
+                  </tr>
+                </thead>
+                <tbody id="table-data"></tbody>
+              </table>
+            </div>
           </div>
-        </div>
 
-        <div class="col-12 my-4 text-center" id="next-pizza-crust">
-          <button type="submit" class="btn btn-warning" id="btn-submit">Submit >></button>
+          <div class="col-12 my-4 text-center" id="next-pizza-crust">
+            <button type="submit" class="btn btn-warning" id="btn-submit">Submit >></button>
+          </div>
         </div>
       </form>
     </section>
   </main>
+  <footer class="bg-light py-5 mt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-4">
+          <h3>Address</h3>
+          <p class="my-3">
+            Deep Dish Pizzeria<br>
+            Ngong Rd, Prestige Plaza Shopping Mall <br>
+            Nairobi, 00100
+          </p>
+        </div>
+        <div class="col-12 col-md-4">
+          <h3>Contact</h3>
+          <p class="my-3">Email: customercare@deep-dish-pizzeria.com <br>
+            Telephone: +000 0789 090 111
+          </p>
+        </div>
+        <div class="col-12 col-md-4">
+          <h3>Social media</h3>
+          <div class="row my-4">
+            <div class="col-12 col-md-3">
+              <i class="fa-brands fa-instagram"></i>
+            </div>
+            <div class="col-12 col-md-3">
+              <i class="fa-brands fa-twitter-square"></i>
+            </div>
+            <div class="col-12 col-md-3">
+              <i class="fa-brands fa-facebook-square"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
   <!--Scripts-->
   <script src="./js/jquery-3.6.0.min.js"></script>
   <script src="./js/bootstrap.min.js"></script>
