@@ -1,3 +1,5 @@
+import {pricesInKsh as prices} from './prices.js';
+
 class Order{
 	constructor(isDelivery=false,location=""){
   	this.pizzas = [];
