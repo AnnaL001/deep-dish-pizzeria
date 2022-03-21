@@ -83,7 +83,8 @@ section#order-placement div.card{
 }
 
 section#order-placement div#pizza-delivery-location,
-section#order-placement div#order-summary{
+section#order-placement div#order-summary,
+section#order-placement div#redirect-to-home{
   display: none;
 }
 
