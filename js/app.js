@@ -31,7 +31,7 @@ $("i.fa-circle-half-stroke").on("click", function(){
   $("body").toggleClass("dark-theme");
   $("nav.navbar").toggleClass("navbar-dark").toggleClass("dark-theme");
   $(".text-color-change").toggleClass("text-white");
-  $("div.card").toggleClass("bg-dark").toggleClass("card-dark").toggleClass("text-white");
+  $("div.card").toggleClass("bg-dark").toggleClass("card-dark");
   $("footer").toggleClass("bg-dark").toggleClass("text-white");
   $("table").toggleClass("table-dark");
 });
