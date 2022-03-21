@@ -23,7 +23,9 @@ let pricesInKsh = new class {
         bacon: 150,
         barbecue: 125,
         pineapple: 100,
-        blackOlives: 125
+        blackOlives: 125,
+        chicken: 125,
+        tomato: 50
       },
       medium: {
       	mozarella: 75,
@@ -31,7 +33,9 @@ let pricesInKsh = new class {
         bacon: 175,
         barbecue: 150,
         pineapple: 125,
-        blackOlives: 150
+        blackOlives: 150,
+        chicken: 150,
+        tomato: 75
       },
       large: {
       	mozarella: 100,
@@ -39,7 +43,9 @@ let pricesInKsh = new class {
         bacon: 200,
         barbecue: 175,
         pineapple: 150,
-        blackOlives: 175
+        blackOlives: 175,
+        chicken: 175,
+        tomato: 100
       }
     }
     this.delivery = 200;
