@@ -12,6 +12,10 @@ button.btn {
   font-size: 1.2rem;
 }
 
+.dark-theme{
+  background-color: rgb(0, 0, 0);
+}
+
 div.alert{
   border-radius: 6rem;
 }
@@ -75,11 +79,15 @@ footer h3 {
   font-weight: 700;
 }
 
-section#order-placement div.card{
+section#order-placement div.card {
   border-radius: 4rem;
   box-shadow: 4rem 4rem rgba(255, 255, 255, 0.3);
   z-index: 2;
   width: 75%;
+}
+
+section#order-placement div.card-dark {
+  box-shadow: 4rem 4rem rgba(0, 0, 0, 0.3);
 }
 
 section#order-placement div#pizza-delivery-location,

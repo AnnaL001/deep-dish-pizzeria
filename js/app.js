@@ -26,6 +26,16 @@ $("input[name='delivery']").on("change", function(event){
   });
 });
 
+//Change theme
+$("i.fa-circle-half-stroke").on("click", function(){
+  $("body").toggleClass("dark-theme");
+  $("nav.navbar").toggleClass("navbar-dark").toggleClass("dark-theme");
+  $(".text-color-change").toggleClass("text-white");
+  $("div.card").toggleClass("bg-dark").toggleClass("card-dark").toggleClass("text-white");
+  $("footer").toggleClass("bg-dark").toggleClass("text-white");
+  $("table").toggleClass("table-dark");
+});
+
 
 
 // Generate order information
