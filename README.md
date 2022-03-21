@@ -4,12 +4,12 @@
 ## Description
 A web application of a fictional pizzeria(Deep Dish Pizzeria) that allows users to place orders of pizzas and based on the size,type of crust and toppings, the price of the pizza is comuputed. In addition to that, if a user would like for the pizza to be delivered, an additional cost is added to the total price of pizzas ordered to generate the overall cost of the order. Besides this, their location information is also recorded and form inputs validated.
 ## Setup/Installation Requirements
-* This is a great place
-* to list setup instructions
-* in a simple
-* easy-to-understand
-* format
-{Leave nothing to chance! You want it to be easy for potential users, employers and collaborators to run your app. Do I need to run a server? Do I need to install any dependencies? How should I set up my databases? Is there other code this app depends on?}
+* Using a mobile device/laptop ensure you have access to stable internet connection
+* To access the web application's code from your GitHub repository, you can fork the repository main's branch via the 'Fork' button.
+* To access the web application's code locally, you can clone the main branch or download the ZIP folder via the 'Code' button
+* Once locally, you can view the web application code via a text editor
+* Otherwise to view the web application, navigate to the live site below: <br>
+  [Live site](https://annal001.github.io/deep-dish-pizzeria/)
 ## Dependencies
 * jQuery - For easy manipulation of the DOM
 * Bootstrap - For predefined styles thus speeding up development time
