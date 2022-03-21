@@ -85,7 +85,7 @@ function redirectToHome(){
 
   $("button#btn-back").on("click", function(){
     $("div#order-summary").hide();
-    $("div#pizza-topping-selection, div#pizza-crust-selection, div#pizza-topping-selection, div#pizza-delivery, button#btn-submit, div#number-of-pizzas").show();
+    $("div#pizza-size-selection, div#pizza-crust-selection, div#pizza-topping-selection, div#pizza-delivery, button#btn-submit, div#number-of-pizzas").show();
     // Hide back button
     $("button#btn-back").hide();
   });
