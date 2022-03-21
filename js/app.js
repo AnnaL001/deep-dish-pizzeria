@@ -27,15 +27,18 @@ $("input[name='delivery']").on("change", function(event){
 });
 
 //Change theme
-$("i.fa-circle-half-stroke").on("click", function(){
+$("i.fa-circle-half-stroke").on("click", toggleTheme);
+
+//Toggle theme
+function toggleTheme(){
   $("body").toggleClass("dark-theme");
   $("nav.navbar").toggleClass("navbar-dark").toggleClass("dark-theme");
   $(".text-color-change").toggleClass("text-white");
   $("div.card").toggleClass("bg-dark").toggleClass("card-dark");
   $("footer").toggleClass("bg-dark").toggleClass("text-white");
   $("table").toggleClass("table-dark");
-});
-
+  $("img#logo").toggleClass("border-white");
+}
 
 
 // Generate order information
