@@ -68,15 +68,17 @@ section#banner h2 {
 /**==============================
   SECTION: ORDER PLACEMENT
 =================================*/
-section#order-placement h3 {
+section#order-placement h3,  
+footer h3{
   font-size: 1.25rem;
   font-weight: 700;
 }
 
-section#order-placement div.card {
+section#order-placement div.card{
   border-radius: 4rem;
   box-shadow: 4rem 4rem rgba(255, 255, 255, 0.3);
   z-index: 2;
+  width: 75%;
 }
 
 section#order-placement div#pizza-delivery-location,
@@ -106,10 +108,25 @@ section#order-placement input.form-control:focus {
 }
 
 /**==============================
+  SECTION: FOOTER
+=================================*/
+footer i{
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/**==============================
   SECTION: MEDIA QUERIES
 =================================*/
 @media screen and (max-width: 576px) {
   nav i {
     margin-left: 1rem;
+  }
+  section#order-placement div.card{
+    width: 100%;
+  }
+  
+  footer {
+    text-align: center;
   }
 }
