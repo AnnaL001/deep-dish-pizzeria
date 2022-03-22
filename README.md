@@ -21,6 +21,8 @@ A web application of a fictional pizzeria(Deep Dish Pizzeria) that allows users 
 * HTML - For the web application structure
 * CSS - For custom styling of the web application elements
 * JS - For defining User Interface(UI) behavior and handling business logic
+## Known bugs
+* The dark theme does not survive page reload/refresh.
 ## Support and contact details
 In case of any queries you can reach out via email; lynn.nyangon@gmail.com
 ### License
